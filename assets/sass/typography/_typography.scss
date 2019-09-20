@@ -1,0 +1,19 @@
+body,
+button,
+input,
+select,
+textarea {
+	@include font-size(1);
+	line-height: $font__line-height-body;
+}
+body {
+	color: #444444;
+	font-family: "acumin-pro",sans-serif;
+	line-height: 1.7em;
+    font-weight: 500;
+    background-color: #fff;
+}
+
+@import "headings";
+
+@import "copy";
