@@ -1847,6 +1847,7 @@ html[xmlns] .flexslider .slides{display:block}
 a{text-decoration:none;-webkit-transition:all ease .2s;transition:all ease .2s}
 .clear{clear:both}
 .site{width:100%;position:relative}
+.et_fixed_nav.et_show_nav #page-container,.et_non_fixed_nav.et_transparent_nav.et_show_nav #page-container{padding:0}
 .wrapper{width:100%;margin:0 auto;padding:0}
 @media screen and (min-width:600px){.wrapper{width:100%}
 }@media screen and (min-width:1200px){.wrapper{max-width:1080px;padding:0}
