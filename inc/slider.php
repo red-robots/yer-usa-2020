@@ -1,4 +1,4 @@
-asf<?php  if( have_rows('slider') ) : ?>
+<?php  if( have_rows('slider') ) : ?>
 	<div class="flexslider">
 		<ul class="slides">
 			<?php  while( have_rows('slider') ) : the_row();

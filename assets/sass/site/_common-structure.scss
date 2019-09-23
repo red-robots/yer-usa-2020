@@ -96,10 +96,28 @@ body.logged-in {
 		}
 	}
 }
+body.home {
+	#content {
+		width: 100%;
+		margin: 120px 0 0 0;
+		@media screen and (min-width: $tabwidth) {
+			// margin: 90px 0 0 0;
+			margin: 140px 0 0 0;
+		}
+		@media screen and (min-width: $deskwidth) {
+			margin: 155px 0 0 0;
+		}
+	}
+}
 #content {
 	width: 100%;
+	margin: 80px 0 0 0;
 	@media screen and (min-width: $tabwidth) {
-		margin: 90px 0 0 0;
+		margin: 100px 0 0 0;
+		// margin: 155px 0 0 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		margin: 115px 0 0 0;
 	}
 }
 .content-area {

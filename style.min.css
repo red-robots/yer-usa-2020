@@ -1810,8 +1810,10 @@ html[xmlns] .flexslider .slides{display:block}
 .flex-pauseplay a:before{font-family:"flexslider-icon";font-size:20px;display:inline-block;content:'\f004'}
 .flex-pauseplay a:hover{opacity:1}
 .flex-pauseplay a .flex-play:before{content:'\f003'}
-.flex-control-nav{width:100%;position:absolute;bottom:10px;text-align:center}
-.flex-control-nav li{margin:0 6px;display:inline-block;zoom:1;*display:inline}
+.flex-control-nav,.entry-content .flex-control-nav{width:100%;position:absolute;bottom:10px;text-align:center;padding:0}
+@media screen and (min-width:600px){.flex-control-nav,.entry-content .flex-control-nav{bottom:23px}
+}@media screen and (min-width:1200px){.flex-control-nav,.entry-content .flex-control-nav{bottom:33px}
+}.flex-control-nav li{margin:0 6px;display:inline-block;zoom:1;*display:inline}
 .flex-control-paging li a{width:25px;height:25px;display:block;background-color:rgba(255,255,255,0);cursor:pointer;text-indent:-9999px;border-radius:50%;border:2px solid #fab900}
 .flex-control-paging li a:hover{background:#333;background-color:white}
 .flex-control-paging li a.flex-active{background:#000;background-color:white;cursor:default}
@@ -1822,11 +1824,17 @@ html[xmlns] .flexslider .slides{display:block}
 .flex-control-thumbs .flex-active{opacity:1;cursor:default}
 @media screen and (max-width:860px){.flex-direction-nav .flex-prev{opacity:1;left:10px}
 .flex-direction-nav .flex-next{opacity:1;right:10px}
-}.text{width:50%;position:absolute;top:20%;color:#fff;left:25%;text-align:center}
-.text h2{font-size:60px;text-transform:uppercase;color:#fff;font-weight:bold;line-height:1.2}
-.text.gallery{left:100px}
-.text.gallery h2{font-size:38px}
-.text.gallery h2.yellow{color:#fab900}
+}.text{width:50%;position:absolute;top:10%;color:#fff;left:25%;text-align:center}
+@media screen and (min-width:600px){.text{top:15%}
+}@media screen and (min-width:1200px){.text{top:20%}
+}.text h2{font-size:30px;text-transform:uppercase;color:#fff;font-weight:bold;line-height:1.2}
+@media screen and (min-width:600px){.text h2{font-size:40px}
+}@media screen and (min-width:1200px){.text h2{font-size:60px}
+}.text.gallery{left:100px}
+.text.gallery h2{font-size:18px}
+@media screen and (min-width:600px){.text.gallery h2{font-size:28px}
+}@media screen and (min-width:1200px){.text.gallery h2{font-size:38px}
+}.text.gallery h2.yellow{color:#fab900}
 .text .gallery{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}
 .text .gallery .logo{-webkit-flex-basis:23%;-ms-flex-preferred-size:23%;flex-basis:23%;background-color:#fff;padding:5px}
 .text .gallery .logo img{max-width:100%}
@@ -1852,8 +1860,12 @@ body.logged-in #masthead{top:32px}
 .custom-top-wrap{width:100%}
 .custom-top-wrap .custom-top{padding:15px 0 15px 0}
 @media screen and (min-width:600px){.custom-top-wrap .custom-top{padding:30px 0 30px 0}
-}#content{width:100%}
-@media screen and (min-width:600px){#content{margin:90px 0 0 0}
+}body.home #content{width:100%;margin:120px 0 0 0}
+@media screen and (min-width:600px){body.home #content{margin:140px 0 0 0}
+}@media screen and (min-width:1200px){body.home #content{margin:155px 0 0 0}
+}#content{width:100%;margin:80px 0 0 0}
+@media screen and (min-width:600px){#content{margin:100px 0 0 0}
+}@media screen and (min-width:1200px){#content{margin:115px 0 0 0}
 }.content-area{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.content-area{width:66%;float:left;margin:0}
 }@media screen and (min-width:1200px){}
