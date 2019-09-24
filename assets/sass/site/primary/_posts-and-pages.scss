@@ -139,18 +139,21 @@ section.about-second {
 	width: 100%;
 	position: relative;
 	background-size: cover;
+	background-position: center;
 	float: left;
 	padding: 80px 0;
 	@media screen and (min-width: $tabwidth) {
-
+		background-size: cover;
 	}
 	.info {
-		width: 33%;
-		float: right;
+		width: 80%;
+		margin: 0 auto;
 		color: $color-blue;
 		text-align: center;
 		@media screen and (min-width: $tabwidth) {
 			margin: auto 10% auto 0;
+			width: 33%;
+			float: right;
 		}
 	}
 	.quote {

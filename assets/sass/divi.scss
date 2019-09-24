@@ -641,7 +641,8 @@ div.wpcf7-response-output {
 	display: flex;
 	flex-wrap: wrap;
 }
-.vacancies-archive #vacancies_loadmore {
+.vacancies-archive #vacancies_loadmore,
+.vacancies-archive #blog_loadmore {
 	padding: 15px 60px 15px 40px;
     border: 1px solid;
     -webkit-border-radius: 3px;
@@ -661,11 +662,13 @@ div.wpcf7-response-output {
     position: relative;
     display: inline-block;
 }
-.vacancies-archive #vacancies_loadmore:hover {
+.vacancies-archive #vacancies_loadmore:hover,
+.vacancies-archive #blog_loadmore:hover {
 	background-color: rgba(0,0,0,.05);
 	border: 1px solid transparent;
 }
-.vacancies-archive #vacancies_loadmore:after {
+.vacancies-archive #vacancies_loadmore:after,
+.vacancies-archive #blog_loadmore:after {
 	content: "";
     background-image: url(img/arrow@2x.png);
     margin-left: .3em;

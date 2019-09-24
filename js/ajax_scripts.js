@@ -35,6 +35,48 @@ jQuery(document).ready(function($ ) {
 		}
 
 	}
+	/*
+	 * Vacancies Load More
+	 */
+	$('#blog_loadmore').click(function(){
+ 
+ 		$.ajax({
+			url : ajaxData.ajaxurl, // AJAX handler
+			data : {
+				'action': 'loadmore', // the parameter for admin-ajax.php
+				'query': ajaxData.posts, // loop parameters passed by wp_localize_script()
+				'page' : ajaxData.current_page, // current page
+				// 'keyword' : $('#keyword').val(),
+				// 'position' : $('#vposition').val(),
+				// 'position-function' : $('#vposition-function').val(),
+				// 'location' : $('#vlocation').val(),
+				// 'consultant' : $('#vconsultant').val()
+			},
+			type : 'POST',
+			beforeSend : function ( xhr ) {
+				$('#blog_loadmore').text('Loading...'); // some type of preloader
+			},
+			success : function( data ){
+				if( data ) {
+ 	
+ 					$('#blog_loadmore').text( 'Load More Posts' );
+					$('#main-posts').append(data); // insert new posts
+					ajaxData.current_page++;
+ 
+					if ( ajaxData.current_page == ajaxData.max_page ) 
+						$('#blog_loadmore').hide(); // if last page, HIDE the button
+
+					// NO need to update the sidebar post count from here
+					// $sidebar.html( $('#main-posts').find('article').length + ' Results');
+					// $sidebar.html( ajaxData.found_posts + ' Results');
+ 
+				} else {
+					$('#blog_loadmore').hide(); // if no data, HIDE the button as well
+				}
+			}
+		});
+		return false;
+	});
 
 	/*
 	 * Vacancies Load More

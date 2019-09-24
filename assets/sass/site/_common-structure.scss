@@ -25,6 +25,12 @@ a {
 		padding: 0px;
 	}
 }
+.mobile-padding {
+	padding: 0 20px;
+	@media screen and (min-width: $tabwidth) {
+		padding: 0;
+	}
+}
 .button {
 	width: auto;
 	text-align: center;
@@ -86,6 +92,9 @@ body.logged-in {
 		top: 32px;
 	}
 }
+ul#testimonials-container {
+	margin: 0 !important;
+}
 .grey-section {
 	background-color: #f4f4f4;
 }
@@ -98,6 +107,9 @@ body.logged-in {
 			padding: 30px 0 30px 0;
 		}
 	}
+}
+body.page-template-default .et_pb_row {
+	padding: 0;
 }
 body.home {
 	#content {
@@ -121,6 +133,7 @@ body.home {
 	}
 	@media screen and (min-width: $deskwidth) {
 		margin: 115px 0 0 0;
+		// margin: 60px 0 0 0;
 	}
 }
 .content-area {

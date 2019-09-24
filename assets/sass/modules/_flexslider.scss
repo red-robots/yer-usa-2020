@@ -309,7 +309,18 @@ html[xmlns] .flexslider .slides {
     }
   }
   &.gallery {
-    left: 100px;
+    position: relative; 
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    background-color: #1a1a1a;
+    margin: 0;
+    @media screen and (min-width: $tabwidth) {
+      width: 50%;
+      left: 100px;
+      position: absolute; 
+      padding: 0;
+    }
     h2 {
       font-size: 18px;
       @media screen and (min-width: $tabwidth) {
@@ -318,8 +329,18 @@ html[xmlns] .flexslider .slides {
       @media screen and (min-width: $deskwidth) {
         font-size: 38px;
       }
-      &.yellow {
+      span.yellow {
         color: $color-yellow;
+        font-size: 13px;
+        width: 100%;
+        display: block;
+        text-align: center;
+         @media screen and (min-width: $tabwidth) {
+            font-size: 18px;
+          }
+          @media screen and (min-width: $deskwidth) {
+            font-size: 28px;
+          }
       }
     }
   }
@@ -351,6 +372,7 @@ html[xmlns] .flexslider .slides {
   .btn {
     width: auto;
     display: inline-block;
+    text-transform: uppercase;
     a {
       background-color: $color-yellow;
       color: #fff;

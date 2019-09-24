@@ -114,7 +114,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 									</div>
 									
 									<div class="go-to-article-btn">
-										<a href="<?php the_permalink(); ?>"><img src="/wp-content/themes/divi-child/img/arrow@2x.png"></a>
+										<a href="<?php the_permalink(); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/arrow@2x.png"></a>
 									</div>
 
 								</div> <!-- .article-post-btn-container -->

@@ -18,7 +18,7 @@
 	 ?>
 
 				 <li>
-				 	<img src="<?php echo $img['url']; ?>"  alt="<?php echo $img['alt']; ?>">
+				 	
 				 	<?php if( $title ) { ?>
 					 	<div class="text <?php echo $c; ?>">
 					 		<h2><?php echo $title; ?></h2>
@@ -42,6 +42,7 @@
 					 		</div>
 					 	</div>
 				 	<?php } ?>
+				 	<img src="<?php echo $img['url']; ?>"  alt="<?php echo $img['alt']; ?>">
 				 </li>
 
 

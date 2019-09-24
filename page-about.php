@@ -58,6 +58,7 @@ include( locate_template( 'inc/banner.php', false, false ) );
 			?>
 			<div class="wrapper">
 				<section class="about-first">
+				<div class="mobile-padding">
 					<div class="block">
 						<h2><?php echo $block_1_title; ?></h2>
 						<div class="desc">
@@ -76,9 +77,11 @@ include( locate_template( 'inc/banner.php', false, false ) );
 							<?php echo $block_3_description; ?>
 						</div>
 					</div>
+					</div>
 				</section>
 			</div>
 			<section class="about-second" style="background-image: url(<?php echo $background_image['url']; ?>);">
+				
 				<div class="info">
 					<div class="quote">
 						<?php echo $quote; ?>
@@ -93,6 +96,7 @@ include( locate_template( 'inc/banner.php', false, false ) );
 						<a href="<?php echo $link ?>">Meet Our Team</a>
 					</div>
 				</div>
+				
 			</section>
 			<section class="about-third">
 				<div class="block left">
@@ -158,5 +162,5 @@ include( locate_template( 'inc/banner.php', false, false ) );
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();
