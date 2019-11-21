@@ -1232,8 +1232,11 @@ body.single {
         font-weight: 200;
         margin-bottom: 10px;
     }
-    #main-content {
-        font-weight: 400
+    #main-content, .entry-content {
+        font-weight: 400!important;
+    }
+    .entry-content {
+        margin-top: 0;
     }
     h1, h2, h3, h4 {
         font-weight: 400;

@@ -84,7 +84,7 @@ if($phone_mobile || $phone_land || $consultant_email)
 							
 							<div class="flex-container-2">
 								<a target="_blank" href="<?php echo $linkedInUrl; ?>">
-								<img src="/wp-content/themes/divi-child/img/icons/linkedin.png">
+								<img src="/wp-content/themes/yer-usa-2020/img/icons/linkedin.png">
 								</a>
 							</div>
 
