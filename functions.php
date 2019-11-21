@@ -1579,4 +1579,43 @@ function yoasttobottom() {
   return 'low';
 }
 add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
+
+
+/*-------------------------------------
+	Custom client login, link and title.
+---------------------------------------*/
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+function my_login_logo() { 
+  $logo_url = get_stylesheet_directory_uri() . '/images/logo.png';
+  ?>
+  <style type="text/css">
+    body.login div#login h1 a {
+		background-image: url(<?php echo $logo_url; ?>);
+		background-size: contain;
+		width: 100%;
+		height: 40px;
+    }
+    .login #backtoblog,
+    .login #nav {
+		text-align: center;
+    }
+    .login #backtoblog a, .login #nav a {
+		color: #0e81b9!important;
+    }
+  </style>
+<?php
+}
+
+// Change Link
+function loginpage_custom_link() {
+	return get_site_url();
+}
+add_filter('login_headerurl','loginpage_custom_link');
+
+
+function client_login_logo_url_title() {
+  return get_bloginfo('name');
+}
+add_filter( 'login_headertitle', 'client_login_logo_url_title' );
+
 ?>

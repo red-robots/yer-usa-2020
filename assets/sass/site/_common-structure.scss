@@ -225,8 +225,7 @@ body.home {
 .logo , h1.logo {
 	width: 150px;
 	position: relative;
-	z-index: 100001;
-	background-image: url(images/logo.png);	
+	z-index: 10000;
 	margin: 10px auto;
 
 	@media screen and (min-width: $tabwidth) {
