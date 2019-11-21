@@ -2216,7 +2216,7 @@ body #page-container .vacancies-archive #vacancies_loadmore:after{right:10px}
 .single-vacancies .et_pb_blog_grid h2,.et_pb_post h2{padding-bottom:10px;font-size:26px}
 }body.single h1.pagetitle{text-align:center;font-size:38px;font-weight:200;margin-bottom:10px}
 body.single #main-content,body.single .entry-content{font-weight:400 !important}
-body.single .entry-content{margin-top:0}
+body.single .entry-content{margin-top:0;line-height:1.4}
 body.single h1,body.single h2,body.single h3,body.single h4{font-weight:400}
 #home-page-get-started-section #vacancies-searchform .search input[type="text"]{border-radius:0;padding:2px;border:1px solid #bbb;color:#4e4e4e;background-color:#fff;font-weight:400;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 #home-page-get-started-section #vacancies-searchform .search input[type="text"]:focus{outline:0;border-color:#2d3940}
