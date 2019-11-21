@@ -9,12 +9,13 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 // }
 
 // var_dump( get_query_var( 's' ) );
-
+$term = get_queried_object();
+$banner = get_field('banner_image', 'category_11');
 ?>
 
 <div id="main-content" class="vacancies-archive">
 
-	<div class="hero-wrapper" style="background-image: url('<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url(11, 'full'); ?>');">
+	<div class="hero-wrapper" style="background-image: url('<?php echo $banner['url']; ?>');">
 		<h1 class="entry-title">Vacancies</h1>
 		<!-- <span class="regular-font"><p class=""><?php the_field('hero_subtitle'); ?></p></span> -->
 	</div>

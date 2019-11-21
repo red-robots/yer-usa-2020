@@ -195,7 +195,7 @@ get_header();
 
 
 					<div id="hire-top-talent-contact-form" class="et_pb_section et_pb_section_13 et_pb_with_background et_section_regular">
-						<div class="et_pb_row formInner et_pb_row_20 et_pb_row_fullwidth">
+						<div class="et_pb_row et_pb_row_20 et_pb_row_fullwidth">
 							<div class="et_pb_column et_pb_column_4_4 et_pb_column_36  et_pb_css_mix_blend_mode_passthrough et-last-child">
 								<div class="et_pb_module et_pb_text et_pb_text_19 et_pb_bg_layout_light  et_pb_text_align_left">
 									<div class="et_pb_text_inner">

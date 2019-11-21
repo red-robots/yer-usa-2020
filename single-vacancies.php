@@ -119,7 +119,9 @@ endif;
 			<?php //get_sidebar(); ?>
 			<div id="sidebar">
 				<h2 class="share-title hide-on-submit">Share This Position</h2>
-				<div class="share-container hide-on-submit"><?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { ADDTOANY_SHARE_SAVE_KIT(); } ?></div>
+				<div class="share-container hide-on-submit">
+					<?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { ADDTOANY_SHARE_SAVE_KIT(); } ?>		
+				</div>
 				<h2 class="consultant-title hide-on-submit">Meet Your Consultant</h2>
 				<div class="consultant-container">
 					<div class="consultant-profile-img"><?php echo $consultant_gravatar; ?></div>

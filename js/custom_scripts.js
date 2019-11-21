@@ -127,6 +127,56 @@ jQuery(document).ready(function($ ) {
 
   	});
 
+    $('body').on('click', '.text .btn a', function(e){
+        e.preventDefault();
+        var urlMap = $(this).attr("href");
+        var urlHash = urlMap.substring(2);
+       // console.log(urlHash);                
+
+        
+        
+        if(urlHash == 'map'){
+            
+            var mapLocation = $("#map");
+            //var mapHeightTop = mapLocation.top();
+            var outerHeight = mapLocation.context.defaultView.outerHeight;
+            var innerHeight = mapLocation.context.defaultView.innerHeight;
+            var Slider = $('.flexslider');
+            var sliderHeight = Slider.height();
+            var masthead = $("#masthead");
+            var masHeight = masthead.height();
+            var homeSection = $('#home-page-get-started-section');
+            var homeHeight = homeSection.outerHeight();
+
+           var scrollTop = (sliderHeight + homeHeight) - 50;
+           
+            
+            window.location.href.split('#')[0];           
+            $("html, body").animate({ scrollTop: scrollTop }, 1000); 
+            //$("html, body").animate({ scrollTop: 1150 }, 1000);
+
+            
+        } else if(urlHash == 'look-for-jobs') {
+
+            handleHash(urlHash); 
+            window.location.href.split('#')[0];
+            $("html, body").animate({ scrollTop: 0 }, 1000);
+            
+        } else {
+            window.location.href = urlMap;
+        }
+        
+
+
+        //console.log(newUrl);
+    });
+
+    function getLocation(href) {
+        var l = document.createElement("a");
+        l.href = href;
+        return l;
+    };
+
   	$('body').on('click', '.tabs-nav-controls li', function(e) {
 
   		/*****************************************************
@@ -168,13 +218,14 @@ jQuery(document).ready(function($ ) {
   	function handleHash(urlHash) {
   		
   		// clear the 'active' class from the tabs and controls
-  		$('.tabs-nav-controls li, .home-page-content-containers div').removeClass('active');
+  		$('.tabs-nav-controls li, .home-page-content-containers div').removeClass('fadeIn active');
 
   		// add the 'active' class to the appropriate tab control
-  		$('li[data-tab='+urlHash+']').addClass('active');
+  		$('li[data-tab='+ urlHash +']').addClass('active');
+  		// console.log(urlHash);
   		
   		// add the 'active' class to the appropriate tab
-  		$('#' + urlHash + '-container').addClass('active');
+  		$('#' + urlHash + '-container').addClass('fadeIn active');
 
   		// clear the hash from the URL
   		window.location.hash = '';
@@ -184,6 +235,8 @@ jQuery(document).ready(function($ ) {
   		
   	}
 
+    
+
   	// get the URL hash
   	var urlHash = window.location.hash.substring(1);
 
@@ -192,9 +245,40 @@ jQuery(document).ready(function($ ) {
   		handleHash(urlHash);
   	}
 
+  	
+    $('body').on('click', '.menu-item-type-custom.menu-item-object-custom a', function(e){
+
+        e.preventDefault();
+
+        if ( window.location.pathname == '/' ){
+
+            if(! $(this).closest('li').hasClass('tab-links')){
+                
+                var urlHash = $(this).attr("href").substring(2);
+
+                 handleHash(urlHash);              
+
+                window.location.href.split('#')[0];
+
+                $("html, body").animate({ scrollTop: 0 }, 1000); 
+
+            }
+
+        } else {
+
+            var url = $(this).attr("href");
+            //console.log(url);
+            window.location.href = url;           
+
+        }
+
+        
+        
+    });
+
   	// if the tab links are clicked from the main menu
   	$('body').on('click', '#menu-main-menu li a, #menu-main-menu-1 li a', function(e) {
-  		// console.log('clicked');
+  		//console.log('clicked');
 
   		/*****************************************************
   		* Important! must hide the static layer and then fade it back in
@@ -221,25 +305,33 @@ jQuery(document).ready(function($ ) {
 		    // Index (home) page
 		    
 		    var parent_has_class = $(this).parent().hasClass('tab-links');
-		    // console.log('has class ', parent_has_class);
+		    //console.log('has class lala', parent_has_class);
 		    
 		    if(parent_has_class) {
+
 		    	e.preventDefault();
-		    	var urlHash = $(this).attr("href").substring(2);
-		    
-		    	handleHash(urlHash);
-		  		
+                var urlHash = $(this).attr("href").substring(2);
+            
+                handleHash(urlHash);
+
+                $('.burger').removeClass('clicked');
+				$('.overlay').removeClass('show');   	
+		    	$('.mobilemenu').removeClass('show'); 
+
 		    }
 
 		    // scroll user back to top of page
-		    $("html, body").animate({ scrollTop: 0 }, 500);
-		   
-		} else {
-		    // Other page
-		    // console.log(window.location.pathname);
-		}
+		    $("html, body").animate({ scrollTop: 0 }, 500);		   
+		}  else {
+            // Other page
+            // console.log(window.location.pathname);
+        }
+		
   		
   	});
+
+  	
+
 
   	// clear the hash from the URL
   	function removeHash() { 
@@ -563,5 +655,35 @@ jQuery(document).ready(function($ ) {
 
 	}, false );
 
+
+	/* Slide 3 Button */
+	$(document).on("click",".slideBtn",function(e){
+		e.preventDefault();
+		var link = $(this).attr("href");
+		var tabType = $(this).attr("data-tab");
+		var target = link.replace("_tab","");
+		var url = window.location.href.split('#')[0];
+		window.history.pushState("", document.title, url);
+		
+		var headerHeight = $("#masthead").outerHeight();
+		var targetDiv = $(target);
+
+		if(tabType=='tab2') {
+			$(".tabs-nav-controls li.tab2").trigger("click");
+		}
+
+		if (target.length) {
+			$('html, body').animate({
+			  scrollTop: targetDiv.offset().top - headerHeight
+			}, 600, function() {
+				if (targetDiv.is(":focus")) { 
+					return false;
+				} else {
+					targetDiv.attr('tabindex','-1'); 
+				};
+			});
+	  	} 
+
+	});
 
 });

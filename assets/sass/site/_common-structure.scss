@@ -108,8 +108,65 @@ ul#testimonials-container {
 		}
 	}
 }
+
+.flexwrap {
+	width: 100%;
+	@media screen and (min-width: $tabwidth) {
+		// display: flex;
+		// flex-direction: row;
+		// flex-wrap: wrap;
+		// justify-content: flex-start;
+		// align-items: flex-start;
+	}
+	article.blog {
+		width: 90%;
+		margin: 10px auto;
+		-webkit-box-shadow: 0px 8px 16px -7px rgba(0,0,0,0.18);
+		-moz-box-shadow: 0px 8px 16px -7px rgba(0,0,0,0.18);
+		box-shadow: 0px 8px 16px -7px rgba(0,0,0,0.18);
+		@include transition(all ease .2s);
+		padding-bottom: 0;
+		color: #000;
+		@media screen and (min-width: $tabwidth) {
+			width: 30%;
+			flex-basis: 30%;
+			margin: 0 3% 30px 0;
+			float: left;
+		}
+		.info {
+			padding: 15px;
+			background-color: #efefef;
+			p {
+				color: #5a5858;
+			}
+		}
+		.btn {
+			width: 100%;
+			display: inline-block;
+			text-transform: uppercase;
+			margin: 10px 0 5px 0;
+			a {
+				background-color: $color-yellow;
+				color: #fff;
+				padding: 3px 30px;
+				width: 100%;
+				display: block;
+				text-align: center;
+			}
+		}
+		&:hover {
+			-webkit-box-shadow: 0px 8px 16px -7px rgba(0,0,0,0.43);
+-moz-box-shadow: 0px 8px 16px -7px rgba(0,0,0,0.43);
+box-shadow: 0px 8px 16px -7px rgba(0,0,0,0.43);
+		}
+	}
+}
+
 body.page-template-default .et_pb_row {
 	padding: 0;
+}
+#hire-top-talent-contact-form .et_pb_row.formInner {
+	padding: 27px 0;
 }
 body.home {
 	#content {
@@ -128,12 +185,13 @@ body.home {
 	width: 100%;
 	margin: 80px 0 0 0;
 	@media screen and (min-width: $tabwidth) {
-		margin: 100px 0 0 0;
+		margin: 84px 0 0 0;
 		// margin: 155px 0 0 0;
 	}
 	@media screen and (min-width: $deskwidth) {
-		margin: 115px 0 0 0;
+		// margin: 115px 0 0 0;
 		// margin: 60px 0 0 0;
+		margin: 98px 0 0 0;
 	}
 }
 .content-area {
@@ -163,10 +221,11 @@ body.home {
 		/*width: 1200px;*/
 	}
 }
-
 /* Logo */
 .logo , h1.logo {
 	width: 150px;
+	position: relative;
+	z-index: 100001;
 	background-image: url(images/logo.png);	
 	margin: 10px auto;
 
@@ -189,22 +248,44 @@ body.home {
 		
 	}
 }
+#masthead .logo {
+	position: relative;
+	z-index: 1000000;
+}
+.greybar {
+	width: 100%;
+	float: left;
+	height: 28px;
+	background-color: #222;
+}
+.dismenu {
+	margin-bottom: 30px;
+	width: 100%;
+	float: left;
+	padding-top: 15px;
+}
+
 .site-footer {
 	width: 100%;
 	clear: both;
 	float: left;
 	background-color: #fff;
 	text-align: center;
-	// padding: 40px 0;
 	border-top: 5px solid $color-light-grey;
+	padding-top: 20px;
+	padding-bottom: 40px;
 	a {
 		color: #fff;
+		transition: all ease-out .3s;
 	}
 	.social {
 		width: 100%;
 		padding: 20px 0;
 		a {
 			color: $color-blue;
+			&:hover {
+				opacity: .7;
+			}
 		}
 		i {
 			// font-size: 20px;
@@ -213,9 +294,6 @@ body.home {
 		svg {
 			margin: 0 5px;
 			@include transition(all eae .2s);
-			&:hover {
-				opacity: .8;
-			}
 		}
 	}
 	.logo {
@@ -280,10 +358,13 @@ body.home {
     }
     li {
     	list-style: none;
-    	margin: 5px 0;
+    	margin: 2px 0;
     }
 	a {
 		color: $color-grey;
+		&:hover {
+			opacity: .6;
+		}
 	}
 }
 .disclaimer {
@@ -325,4 +406,7 @@ ul.tabs-nav-controls {
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
+}
+nav.mobilemenu {
+	background-color: rgba(255, 255, 255, 0.97);
 }

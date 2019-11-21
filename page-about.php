@@ -57,8 +57,8 @@ include( locate_template( 'inc/banner.php', false, false ) );
 			endwhile; // End of the loop.
 			?>
 			<div class="wrapper">
-				<section class="about-first">
-				<div class="mobile-padding">
+				<section class="about-first ">
+				<!-- <div class="mobile-padding"> -->
 					<div class="block">
 						<h2><?php echo $block_1_title; ?></h2>
 						<div class="desc">
@@ -77,7 +77,7 @@ include( locate_template( 'inc/banner.php', false, false ) );
 							<?php echo $block_3_description; ?>
 						</div>
 					</div>
-					</div>
+					<!-- </div> -->
 				</section>
 			</div>
 			<section class="about-second" style="background-image: url(<?php echo $background_image['url']; ?>);">

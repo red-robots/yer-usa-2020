@@ -21,18 +21,19 @@ $twitter = get_field('twitter', 'option');
 		</div>
 		<div class="social">
 			<?php if($facebook){ ?>
-				<a href="<?php echo $facebook; ?>"><i class="fab fa-facebook-f fa-2x"></i></a>
+				<a href="<?php echo $facebook; ?>"><i class="fab fa-facebook-f fa-lg"></i></a>
 			<?php } ?>
 			<?php if($twitter){ ?>
-				<a href="<?php echo $twitter; ?>"><i class="fab fa-twitter fa-2x"></i></a>
+				<a href="<?php echo $twitter; ?>"><i class="fab fa-twitter fa-lg"></i></a>
 			<?php } ?>
 			<?php if($linkedin){ ?>
-				<a href="<?php echo $linkedin; ?>"><i class="fab fa-linkedin-in fa-2x"></i></a>
+				<a href="<?php echo $linkedin; ?>"><i class="fab fa-linkedin-in fa-lg"></i></a>
 			<?php } ?>
 		</div>
 		<div class="footer-nav">
 			<?php wp_nav_menu( array( 'theme_location' => 'secondary-menu') ); ?>
 		</div><!-- wrapper -->
+		<div class="greybar"></div>
 		<footer class="disclaimer">
 			<div class="dismenu"><?php wp_nav_menu( array( 'theme_location' => 'footer-menu') ); ?></div>
 			&copy; <?php echo date('Y'); ?> YER Inc. All rights reserved.

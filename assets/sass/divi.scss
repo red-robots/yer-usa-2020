@@ -77,6 +77,7 @@ header#mhmm {
 	top: inherit;
 	background: #fff;
 }
+
 /*
 * ----------[HOME PAGE TABS]-------*
 */
@@ -314,7 +315,9 @@ form .ajax-loader {
     width: 100%;
     max-width: 500px;
     font-size: 16px;
+    font-weight: 400;
     color: #444444;
+    border-radius: 0px;
 }
 .apply-form input,
 .apply-form textarea {
@@ -336,11 +339,14 @@ form .ajax-loader {
 	background: transparent;
 	border: 1px solid #182C72;
 	box-shadow: none;
+    text-shadow: none;
 	color: #182C72;
 	text-transform: uppercase;
 	font-size: 22px;
     cursor: pointer;
-    padding: 10px;
+    padding: 14px 10px;
+    -webkit-appearance: none;
+    border-radius: 0px;
 }
 #look-for-jobs-apply-form input[type="submit"] {
 	height: inherit;
@@ -393,6 +399,7 @@ form .ajax-loader {
 	background: #fff;
 	padding: 14px 25px 14px 10px;
 	color:#444;
+    font-weight: 400;
 }
 .styled-select,
 #vacancies-filter-bar .styled-select .wrapper.dwn-arrow,
@@ -1217,3 +1224,117 @@ ul#latest-vacancies-container .job-excerpt {
 }
 @media only screen and (max-width: 480px) {}
 @media only screen and (max-width: 980px) and (orientation : portrait) {}
+
+body.single {
+    h1.pagetitle {
+        text-align: center;
+        font-size: 38px;
+        font-weight: 200;
+        margin-bottom: 10px;
+    }
+    #main-content {
+        font-weight: 400
+    }
+    p img.size-full.aligncenter {
+        width: 100%;
+        height: auto;
+    }
+    h1, h2, h3, h4 {
+        font-weight: 400;
+    }
+}
+#home-page-get-started-section #vacancies-searchform {
+    .search input[type="text"] {
+        border-radius: 0px;
+        padding: 2px;
+        border: 1px solid #bbb;
+        color: #4e4e4e;
+        background-color: #fff;
+        font-weight: 400;
+        transition: all ease-out .3s;
+        &:focus {
+            outline: none;
+            border-color: #2d3940;
+        }
+    }
+    .search .fa-search {
+        color: #bdbdbd;
+    }
+    .search input[type="submit"] {
+        height: 100%;
+        padding: 0 20px;
+        background: #182C72;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 0px;
+        -webkit-appearance: none;
+        box-shadow: none;
+        text-shadow: none;
+        font-size: 16px;
+        transition: all ease-out .3s;
+        position: relative;
+        top: -1px;
+    }
+}
+#hire-top-talent-testimonials {
+    .et_pb_row.et_pb_row_17 {
+        padding: 20px 0 0;
+    }
+}
+ul#testimonials-container  {
+    .testimonial-item .quote {
+        font-size: 26px;
+    }
+    .testimonial-item .testimonial-meta {
+        padding-top: 20px;
+    }
+}
+
+
+.flex-next {
+    &:before {
+        position: relative;
+        left: -2px;
+    }
+}
+ul.slides .text {
+    h2 {
+        font-weight: 400;
+        // @media screen and (min-width: $deskwidth) {
+        //     font-size: 70px;
+        // }
+    }
+}
+.steps .desc {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+#main-footer {
+    background: #FFF;
+}
+@media screen and (max-width: 780px) {
+    ul.slides .text {
+        width: 100%;
+        padding: 0 0;
+        left: 0;
+        position: absolute;
+        top: 20%;
+        transform: scale(0.7) translateY(-20%);
+        h2 {
+            font-size: 45px;
+        }
+    } 
+    .flex-control-nav {
+        bottom: -5px;
+    }
+}
+@media screen and (max-width: 480px) {
+    #hire-top-talent-container .flex-control-nav {
+        display: none!important;
+    }
+    ul.slides .text h2 {
+        font-size: 28px;
+    }
+}

@@ -17,9 +17,39 @@ get_header();
 // var_dump( get_query_var( 's' ) );
 $thumb = get_the_post_thumbnail_url();
 $tagline = get_field('tagline');
-$secondary_tagline = get_field('secondary_tagline');
-include( locate_template( 'inc/banner.php', false, false ) );
-?>
+$secondary_tagline = '';
+
+
+
+
+if( !$tagline ) {
+	$tagline=get_the_title();
+	} ?>
+<div class="banner hero-wrapper" style="background-image: url(<?php echo $thumb; ?>);">
+
+<div class="et_pb_row et_pb_row_10">
+<div class="et_pb_column et_pb_column_4_4 et_pb_column_22  et_pb_css_mix_blend_mode_passthrough et-last-child">
+<div class="et_pb_module et_pb_text et_pb_text_12 et_pb_bg_layout_light  et_pb_text_align_center">
+
+	<div class="et_pb_text_inner">
+		<h1><?php the_title(); ?></h1>
+	</div>
+
+
+	<div class="et_pb_module et_pb_text et_pb_text_13 condensed et_pb_bg_layout_light  et_pb_text_align_center">
+		<div class="et_pb_text_inner tagline">
+			<?php //echo $tagline; ?>
+		</div>
+		
+		<?php if($secondary_tagline) { ?>
+		<div class="et_pb_module et_pb_text et_pb_text_14 condensed et_pb_bg_layout_light  et_pb_text_align_center">
+			<div class="tagline-sec et_pb_text_inner"><?php echo $secondary_tagline; ?></div>
+		</div>
+		<?php } ?>
+	</div>
+
+	</div></div></div>
+</div>
 
 <div id="main-content" class="vacancies-archive">
 
@@ -38,14 +68,14 @@ include( locate_template( 'inc/banner.php', false, false ) );
 					$wp_query = new WP_Query();
 					$wp_query->query(array(
 						'post_type'=>'post',
-						'posts_per_page' => 1,
+						'posts_per_page' => 10,
 						'paged' => $paged
 					));
 
 					if( $wp_query->have_posts() ) :
 				?>
 				
-				<div id="main-posts" class="ajax_posts">
+				<div id="main-posts" class="ajax_posts flexwrap">
 					
 					<?php
 						$count = 0; 
@@ -65,35 +95,36 @@ include( locate_template( 'inc/banner.php', false, false ) );
 
 							?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'et_pb_post' ); ?>>
+							<article id="post-<?php the_ID(); ?>" class="blog" >
 
-								
-
+								<?php if($thumbz){ ?>
+										<div class="thumb">
+											<img src="<?php echo $thumbz; ?>">
+										</div>
+									<?php } ?>
+								<div class="info">
 								<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								
 								<div class="the-excerpt"><?php the_excerpt(); ?></div>
 								
 								<div class="article-post-btn-container">
 									
-									<div class="truncated-post">
+									<!--<div class="truncated-post">
 										<?php
 											// et_divi_post_meta();
 											truncate_post( 170 );	
 										?>
-									</div> <!-- .truncated-post -->
+									</div>  .truncated-post -->
 									
-									<?php if($thumbz){ ?>
-										<div class="job-client-logo">
-											<img src="<?php echo $thumbz; ?>">
-										</div>
-									<?php } ?>
 									
-									<div class="go-to-article-btn">
-										<a href="<?php the_permalink(); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/arrow@2x.png"></a>
-									</div>
+
+									
 
 								</div> <!-- .article-post-btn-container -->
-
+								</div>
+								<div class="btn">
+										<a href="<?php the_permalink(); ?>">Read More</a>
+									</div>
 							</article> <!-- .et_pb_post -->
 					<?php
 						endwhile;

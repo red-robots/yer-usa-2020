@@ -18,15 +18,24 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <link rel="stylesheet" href="https://use.typekit.net/puk0kbb.css">
+<style type="text/css">
+body {font-family: "acumin-pro",sans-serif;}
 
+h1, h2, h3, h4, h5, h6, .condensed, .contact-form input[type="submit"], .apply-link, #look-for-jobs-apply-form input[type="submit"] {font-family: "acumin-pro-condensed",sans-serif;}
+
+.regular-font h1, .regular-font h2, .regular-font h3, .regular-font h4, .regular-font h5, .regular-font h6,
+h1.regular-font, h2.regular-font, h3.regular-font, h4.regular-font, h5.regular-font, h6.regular-font {font-family: "acumin-pro",sans-serif;}</style>
 
 
 <link rel='stylesheet' id='childstyle-css'  href='<?php bloginfo( 'stylesheet_directory' ); ?>/divi.css' type='text/css' media='all' />
+
 <?php 
 if(is_page('yer-usa')) {
 	$thePage='contact';
 }elseif(is_page('careers')) {
 	$thePage='careers';
+}elseif(is_page('about')) {
+	$thePage='about';
 }elseif(is_front_page()) {
 	$thePage='home';
 }
@@ -42,7 +51,7 @@ if(is_page('yer-usa')) {
 <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js?ver=1'></script>
 
 
- <?php if( is_page(array('yer-usa','careers')) || is_front_page() ) { ?>
+ <?php if( is_page(array('yer-usa','careers', 'about')) || is_front_page() ) { ?>
 <link rel='stylesheet'  href='<?php bloginfo( 'stylesheet_directory' ); ?>/inline-styles-<?php echo $thePage; ?>.css' type='text/css' media='all' />
 <?php } ?>
 </head>
@@ -96,10 +105,10 @@ if(is_page('yer-usa')) {
 					<div id="home-page-tabs" class="et_pb_module et_pb_code et_pb_code_0">
 						<div class="et_pb_code_inner">
 							<ul class="tabs-nav-controls">
-								<li class="active" data-tab="hire-top-talent">
+								<li class="active tab1" data-tab="hire-top-talent">
 									<a href="">Hire Top Talent</a>
 								</li>
-								<li class="" data-tab="look-for-jobs">
+								<li class="tab2" data-tab="look-for-jobs">
 									<a href="">Look For Jobs</a>
 								</li>
 							</ul>

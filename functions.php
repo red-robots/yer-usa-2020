@@ -9,9 +9,13 @@ function theme_name_scripts() {
 	$theme_version = et_get_theme_version();
 
 	// Get last modified timestamp of CSS file in /css/style.css
-    $style_path = get_stylesheet_directory_uri() . '/style.css';
-    $style_real_path = get_stylesheet_directory().'/style.css';
-    
+    // $style_path = get_stylesheet_directory_uri() . '/style.css';
+    // $style_real_path = get_stylesheet_directory().'/style.css';
+	
+	$style_path = get_stylesheet_directory_uri() . '/style.min.css';
+    $style_real_path = get_stylesheet_directory().'/style.min.css';
+
+
     $css_time = filemtime($style_real_path);
     
     wp_register_style( 'childstyle', $style_path, array(), $css_time );
@@ -23,9 +27,16 @@ function theme_name_scripts() {
     
     $js_time = filemtime($js_real_path);
 
+  //   wp_enqueue_script( 
+		// 	'acstarter-blocks', 
+		// 	get_stylesheet_directory_uri() . '/assets/js/vendors.js', 
+		// 	array(), '20120206', 
+		// 	true 
+		// );
+
     wp_enqueue_script( 
 			'acstarter-blocks', 
-			get_stylesheet_directory_uri() . '/assets/js/vendors.js', 
+			get_stylesheet_directory_uri() . '/assets/js/vendors.min.js', 
 			array(), '20120206', 
 			true 
 		);

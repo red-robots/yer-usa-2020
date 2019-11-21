@@ -25,7 +25,7 @@
   */
 
 var project             = 'AC-Starter'; // Project Name.
-var projecturl          = 'http://localhost:8888/austincrane/ACStarter/'; // Project URL. Could be something like localhost:8888.
+var projecturl          = 'http://bellaworks/yer/'; // Project URL. Could be something like localhost:8888.
 
 
 var styleSRC            = './assets/sass/style.scss'; // Path to main .scss file.
