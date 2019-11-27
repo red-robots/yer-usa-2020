@@ -67,13 +67,13 @@ if(is_page('yer-usa')) {
 			
 			<?php if(is_home()) { ?>
 	            <h1 class="logo">
-		            <a href="<?php bloginfo('url'); ?>">
+		            <a href="<?php bloginfo('url'); ?>" class="animated fadeInLeftcustom">
 		            	<img src="<?php bloginfo('stylesheet_directory'); ?>/images/yer-logo.svg" alt="<?php bloginfo('name'); ?>">
 		            </a>
 	            </h1>
 	        <?php } else { ?>
 	            <div class="logo">
-	            	<a href="<?php bloginfo('url'); ?>">
+	            	<a href="<?php bloginfo('url'); ?>" class="animated fadeInLeftcustom">
 		            	<img src="<?php bloginfo('stylesheet_directory'); ?>/images/yer-logo.svg" alt="<?php bloginfo('name'); ?>">
 		            </a>
 	            </div>

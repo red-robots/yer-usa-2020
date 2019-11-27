@@ -118,7 +118,7 @@ section.about-first {
 			flex-basis: 33%;
 			width: auto;
 			border-right: 1px solid #000;
-			padding: 0 40px ;
+			padding: 0 45px ;
 			&:last-child {
 				border-right: 0px solid #000;
 			}
@@ -186,7 +186,7 @@ section.about-third {
 	.block {
 		width: 100%;
 		float: left;
-		padding: 5%;
+		padding: 3.5% 5%;
 		color: $color-blue;
 		font-weight: 200;
 		line-height: 1;
@@ -206,21 +206,25 @@ section.about-third {
 				margin: 0 0 10px 0;
 			}	
 		}
-		&.left {background-color: $color-light-grey;}
+		&.left {
+			background-color: $color-light-grey;
+		}
 		h2 {
 			font-size: 50px;
 			font-weight: 200;
-			margin: 0 0 10px 0;
+			margin: 0 0 25px 0;
 		}
 		h3 {
-			font-size: 25px;
+			font-family: "acumin-pro",sans-serif;
+			font-size: 22px;
 			font-weight: 700;
 		}
 		ul {
-			margin: 0 0 20px 0;
+			margin: 0 0 20px 10px;
 			padding: 0;
 			color: $color-black;
 			font-size: 18px;
+			font-weight: 300;
 			// list-style-position: inside;
 			word-break: break-all; 
 			padding: 0 0 0 10px;
@@ -228,6 +232,9 @@ section.about-third {
 				font-weight: 20px;
 				margin: 0 0 10px 0;
 			}
+		}
+		&.left ul li {
+			color: #182c72;
 		}
 		.half {
 			width: 100%;

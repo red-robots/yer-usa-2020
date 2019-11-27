@@ -1,5 +1,7 @@
 jQuery(document).ready(function($ ) {
 
+	$("#masthead .logo a").removeClass("fadeInLeftcustom");
+
 	// set some variables
 	var headerHeight;
 	var overlay_nav = $('.et_pb_mhmm_menu_0 .menu-overlay, .et_pb_mhmm_menu.menu-style-full nav');

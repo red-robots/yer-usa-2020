@@ -136,6 +136,9 @@ body #page-container .yer-btn:after {
     top: 50%;
     transform: translateY(-50%);
 }
+body #page-container.et-animated-content {
+    margin-top: 0!important;
+}
 
 /*
 * --------[PAGES]--------*
@@ -397,7 +400,7 @@ form .ajax-loader {
 #vacancies-filter-bar .styled-select select,
 #consultants-filter-bar .styled-select select {
 	background: #fff;
-	padding: 14px 25px 14px 10px;
+	padding: 14px 25px 13px 10px;
 	color:#444;
     font-weight: 400;
 }
@@ -787,7 +790,7 @@ ul#latest-vacancies-container .job-excerpt {
 .single-vacancies .hero-wrapper,
 .single-consultant .hero-wrapper {
 	background-color: #182C72;
-	padding:60px 20px;
+	padding: 75px 20px 55px;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -799,14 +802,26 @@ ul#latest-vacancies-container .job-excerpt {
 .single-consultant .job-title {
 	color: #fff;
 }
+
 .single-vacancies .position-status {
 	opacity: .5;
 	padding-bottom: 5px;
+    font-weight: 200;
 }
 .single-vacancies .entry-title,
 .single-consultant .entry-title {
 	font-size: 65px;
+    font-weight: 100;
     letter-spacing: 3px;
+   
+}
+.single-consultant .consultant-location {
+    font-weight: 200;
+}
+
+.single-consultant .hero-wrapper h2,
+.single-vacancies .hero-wrapper h2  {
+    font-weight: 200;
 }
 .single-vacancies .entry-content,
 .single-consultant .entry-content {
@@ -1314,6 +1329,19 @@ ul.slides .text {
 #main-footer {
     background: #FFF;
 }
+.et_pb_column_23.contactInfoWrap {
+    padding-bottom: 35px;
+}
+@media screen and (max-width: 980px) {
+    ul#latest-vacancies-container {
+        margin-left: -5px;
+    }
+    ul#testimonials-container li {
+        max-width: 580px;
+        width: 95%;
+    }
+}
+
 @media screen and (max-width: 780px) {
     ul.slides .text {
         width: 100%;
@@ -1329,7 +1357,28 @@ ul.slides .text {
     .flex-control-nav {
         bottom: -5px;
     }
+    .custom-top-wrap .custom-top {
+        padding: 15px 0 10px 0;
+    }
+    #content {
+        margin: 90px 0 0 0;
+    }
+    .hero-wrapper .et_pb_text_14 {
+        padding-bottom: 20px!important;
+    }
+    section.about-third .block ul {
+        margin: 0 0 20px 12px;
+    }
 }
+@media screen and (max-width: 599px) {
+    section.about-first {
+        padding: 50px 0 60px;
+        .block  {
+            padding: 15px 5%;
+        }
+    }
+}
+
 @media screen and (max-width: 480px) {
     #hire-top-talent-container .flex-control-nav {
         display: none!important;

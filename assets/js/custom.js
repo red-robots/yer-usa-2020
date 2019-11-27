@@ -5,8 +5,9 @@
  *	Designed by: Austin Crane
  */
 
+
 jQuery(document).ready(function ($) {
-	
+
 	/*
 	*
 	*	Current Page Active

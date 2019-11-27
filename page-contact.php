@@ -44,33 +44,42 @@ get_header();
 								</div> <!-- .et_pb_section -->
 								<div class="et_pb_section et_pb_section_7 et_section_regular">
 									<div class="et_pb_row et_pb_row_11 et_pb_row_fullwidth et_pb_gutters1 et_pb_row_1-4_3-4">
-										<div class="et_pb_column et_pb_column_1_4 et_pb_column_23  et_pb_css_mix_blend_mode_passthrough">
+										<div class="et_pb_column et_pb_column_1_4 et_pb_column_23  contactInfoWrap et_pb_css_mix_blend_mode_passthrough">
 										<?php if(have_rows('addresses')) : 
 										$count = count(get_field('addresses'));
 										$row=1;
 										?>
 											<?php while(have_rows('addresses')) : the_row(); 
-
 												$city = get_sub_field('city');
 												$add1 = get_sub_field('address_line_1');
 												$add2 = get_sub_field('address_line_2');
 												$mapIt = get_sub_field('map_it_link');
 												$phone = get_sub_field('phone');
 												$email = antispambot( get_sub_field('email') );
+												$infos = array($add1,$add2,$mapIt,$phone,$email);
+												$hasInfo = ($infos && array_filter($infos)) ? array_filter($infos) : '';
 											?>
 											<div class="et_pb_module et_pb_text et_pb_text_13 regular-font et_pb_bg_layout_light  et_pb_text_align_left">
 												<div class="et_pb_text_inner">
 													<?php if($city) { ?><h2><?php echo $city; ?></h2><?php } ?>
-														<p>
+
+													<?php if ($hasInfo) { ?>
+													<p>
 														<?php if($add1) { ?><?php echo $add1; ?><?php } ?>
 														<?php if($add2) { ?><br /><?php echo $add2; ?><?php } ?>
 														<?php if($mapIt) { ?><br /><a href="<?php echo $city; ?>" target="_blank" rel="noopener noreferrer">Map It</a><?php } ?>
-														<br />&#8211;
+
+														<?php if ($phone || $email) { ?>
+															<br />&#8211;
+														<?php } ?>
+														
 														<?php if($phone) { ?><br /><?php echo $phone; ?><?php } ?>
 														<?php if($email) { ?>
 															<br /><a href="<?php echo $email; ?>"><?php echo $email; ?></a>
 														<?php } ?>
 													</p>
+													<?php } ?>
+
 												</div>
 											</div> <!-- .et_pb_text -->
 											<?php if( $row !== $count ) { ?>
