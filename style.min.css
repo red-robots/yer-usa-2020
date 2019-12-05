@@ -2237,8 +2237,13 @@ ul.slides .text h2{font-weight:400}
 .et_pb_column_23.contactInfoWrap{padding-bottom:35px}
 @media screen and (max-width:980px){ul#latest-vacancies-container{margin-left:-5px}
 ul#testimonials-container li{max-width:580px;width:95%}
-}@media screen and (max-width:780px){ul.slides .text{width:100%;padding:0;left:0;position:absolute;top:20%;-webkit-transform:scale(0.7) translateY(-20%);-ms-transform:scale(0.7) translateY(-20%);transform:scale(0.7) translateY(-20%)}
-ul.slides .text h2{font-size:45px}
+ul.slides .text{width:100%;left:0;top:40%;-webkit-transform:translateY(-40%);-ms-transform:translateY(-40%);transform:translateY(-40%);margin:0;padding:0 10%}
+ul.slides .text.gallery{left:0;margin:0;padding:0 14%}
+ul.slides .text h2,ul.slides .text h2 span.yellow{color:#FFF !important;font-size:7vh}
+ul.slides .text .btn a{padding:3px 20px 7px}
+.flex-control-nav{bottom:8%}
+.flex-control-paging li a{width:16px;height:16px}
+}@media screen and (max-width:780px){ul.slides .text h2,ul.slides .text h2 span.yellow{font-size:3vh}
 .flex-control-nav{bottom:-5px}
 .custom-top-wrap .custom-top{padding:15px 0 10px 0}
 #content{margin:90px 0 0 0}
@@ -2247,5 +2252,7 @@ section.about-third .block ul{margin:0 0 20px 12px}
 }@media screen and (max-width:599px){section.about-first{padding:50px 0 60px}
 section.about-first .block{padding:15px 5%}
 }@media screen and (max-width:480px){#hire-top-talent-container .flex-control-nav{display:none !important}
-ul.slides .text h2{font-size:28px}
+ul.slides .text h2,ul.slides .text.gallery h2 span.yellow{font-size:2vh}
+ul.slides .text{top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);padding:0 15%;margin:0}
+ul.slides .text .btn a{font-size:12px;padding:2px 18px 6px}
 }

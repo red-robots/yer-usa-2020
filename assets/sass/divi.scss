@@ -1340,18 +1340,40 @@ ul.slides .text {
         max-width: 580px;
         width: 95%;
     }
+    ul.slides .text {
+        width: 100%;
+        left: 0;
+        top: 40%;
+        transform: translateY(-40%);
+        margin: 0 0;
+        padding: 0 10%;
+        &.gallery {
+            left: 0;
+            margin: 0 0;
+            padding: 0 14%;
+        }
+        h2, h2 span.yellow {
+            color: #FFF!important;
+            font-size: 7vh;
+        }
+        .btn a {
+            padding: 3px 20px 7px;
+        }
+    }
+
+    .flex-control-nav {
+        bottom: 8%;
+    }
+    .flex-control-paging li a {
+        width: 16px;
+        height: 16px;
+    }
 }
 
 @media screen and (max-width: 780px) {
     ul.slides .text {
-        width: 100%;
-        padding: 0 0;
-        left: 0;
-        position: absolute;
-        top: 20%;
-        transform: scale(0.7) translateY(-20%);
-        h2 {
-            font-size: 45px;
+        h2, h2 span.yellow {
+           font-size: 3vh;
         }
     } 
     .flex-control-nav {
@@ -1383,7 +1405,18 @@ ul.slides .text {
     #hire-top-talent-container .flex-control-nav {
         display: none!important;
     }
-    ul.slides .text h2 {
-        font-size: 28px;
+    ul.slides .text h2,
+    ul.slides .text.gallery h2 span.yellow {
+        font-size: 2vh;
+    }
+    ul.slides .text {
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0 15%;
+        margin:0 0;
+    }
+    ul.slides .text .btn a {
+        font-size: 12px;
+        padding: 2px 18px 6px;
     }
 }
