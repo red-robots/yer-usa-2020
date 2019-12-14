@@ -323,7 +323,7 @@ get_header();
 											<img src="<?php bloginfo('url'); ?>/wp-content/uploads/2018/05/In-75px.png" />
 										</span>
 									</div>
-									<div class="et_pb_module et_pb_text et_pb_text_26 et_pb_bg_layout_light  et_pb_text_align_center">
+									<div id="connectWithUs" class="et_pb_module et_pb_text et_pb_text_26 et_pb_bg_layout_light  et_pb_text_align_center">
 										<div class="et_pb_text_inner">
 											<p>
 												<span class="condensed" style="line-height: 1;">Connect With Us</span><!--max-width-200-on-lrg-->
@@ -338,7 +338,7 @@ get_header();
 										</a>
 									</div>
 								</div> <!-- .et_pb_column -->
-								<div class="et_pb_column et_pb_column_1_2 et_pb_column_43  et_pb_css_mix_blend_mode_passthrough et-last-child">
+								<div id="emptyGrayBox" class="et_pb_column et_pb_column_1_2 et_pb_column_43  et_pb_css_mix_blend_mode_passthrough et-last-child">
 									<div class="et_pb_module et_pb_code et_pb_code_12  et_pb_text_align_center">
 										<div class="et_pb_code_inner"><!--<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>-->
 											<script type="IN/JYMBII" data-companyid="11317039" data-format="inline"></script>

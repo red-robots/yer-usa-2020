@@ -2197,6 +2197,7 @@ ul#testimonials-container .testimonial-item .quote:after{right:-5%}
 #about-page-blurb-section .et_pb_blurb{border-right:0;padding-right:0 !important}
 .single-vacancies #sidebar{padding:40px;background:#f5f5f5;margin-top:30px;margin-bottom:30px}
 .single-consultant #content-area{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:reverse;-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}
+#emptyGrayBox{display:none}
 }@media only screen and (max-width:767px){.search .fa-search{display:none}
 .search input[type="text"]{text-indent:0;text-align:center}
 .search input[type="submit"]{margin-top:10px}
@@ -2219,6 +2220,7 @@ body #page-container .vacancies-archive #vacancies_loadmore:after{right:10px}
 .single-vacancies #sidebar{margin-top:inherit;margin-bottom:inherit}
 .single-vacancies .container #left-area{padding:20px 40px 40px}
 .single-vacancies .et_pb_blog_grid h2,.et_pb_post h2{padding-bottom:10px;font-size:26px}
+}@media only screen and (max-width:480px){#home-page-get-started-section #vacancies-searchform{margin-bottom:30px}
 }body.single h1.pagetitle{text-align:center;font-size:38px;font-weight:200;margin-bottom:10px}
 body.single #main-content,body.single .entry-content{font-weight:400 !important}
 body.single .entry-content{margin-top:0;line-height:1.4}
